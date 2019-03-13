@@ -9,3 +9,8 @@
 #purchases li {
     background-color: aquamarine;
 }
+
+.popup {
+    font-weight: bold;
+    color: red;
+}

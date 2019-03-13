@@ -14,7 +14,21 @@ function showBodyChildrenCount() {
         var childNode = body.childNodes[i];
         if (childNode.nodeType === 1) number++;
     }
-    alert("number = " + number);
+    // alert("number = " + number);
 }
 
 window.onload = showBodyChildrenCount;
+
+function popUp(element) {
+    url = element.getAttribute("href") || "https://www.baidu.com/";
+    window.open(url,"popup","width=320,height=480");
+}
+
+var popups = document.getElementsByClassName("popup");
+for (var i = 0; i < popups.length; i++) {
+    var element = popups.item(i);
+    element.onclick = function () {
+        popUp(this);
+        return false;
+    }
+}
