@@ -10,17 +10,27 @@
 <h1>SnapShots</h1>
 <img src="images/marathon.jpg" alt="my image gallery" id="placeholder">
 <p id="desc">Choose an image.</p>
-<ul>
-    <li><a href="images/babe.jpg" title="babe" onclick="showPicture(this);return false;">美女</a></li>
-    <li><a href="images/break.png" title="break" onclick="showPicture(this);return false;">破解</a></li>
-    <li><a href="images/hz_marathon.png" title="hz_marathon" onclick="showPicture(this);return false;">马拉松成绩</a></li>
-    <li><a href="images/mazda.jpeg" title="mazda" onclick="showPicture(this);return false;">马自达</a></li>
-    <li><a href="images/porsche.jpeg" title="porsche" onclick="showPicture(this);return false;">法拉利</a></li>
+<ul id="images">
+    <li><a href="images/babe.jpg" title="babe" class="galleryItem">
+        <img src="images/babe.jpg" alt="Babe" width="50" height="50">
+    </a></li>
+    <li><a href="images/break.png" title="break" class="galleryItem">
+        <img src="images/break.png" alt="Break" width="50" height="50">
+    </a></li>
+    <li><a href="images/hz_marathon.png" title="hz_marathon" class="galleryItem">
+        <img src="images/hz_marathon.png" alt="HzMarathon" width="50" height="50">
+    </a></li>
+    <li><a href="images/mazda.jpeg" class="galleryItem" onkeypress="return !showPicture(this);">
+        <img src="images/mazda.jpeg" alt="Mazda" width="50" height="50">
+    </a></li>
+    <li><a href="images/porsche.jpeg" title="porsche" class="galleryItem">
+        <img src="images/porsche.jpeg" alt="Porsche" width="50" height="50">
+    </a></li>
 </ul>
 <a href="images/babe.jpg" onclick="return false;">Click Me</a>
 <a href="test.html" class="popup">跳转</a>
 <a href="https://www.douban.com/" class="popup">跳转</a>
 <a href="images/babe.jpg" class="popup">跳转</a>
-<script type="application/javascript" src="chapter04case_research_gallery/gallery.js"></script>
+<script type="application/javascript" src="chapter06gallery_improved/gallery.js"></script>
 </body>
 </html>

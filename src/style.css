@@ -14,3 +14,15 @@
     font-weight: bold;
     color: red;
 }
+
+#images li {
+    display: inline;
+}
+
+#images {
+    list-style: none;
+}
+
+#images li a img {
+    boder: 0;
+}
