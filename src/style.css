@@ -26,3 +26,14 @@
 #images li a img {
     border: 0;
 }
+
+body {
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 10pt;
+}
+
+abbr {
+    text-decoration: none;
+    border: 0pt;
+    font-style: normal;
+}
