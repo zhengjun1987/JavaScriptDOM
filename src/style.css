@@ -30,10 +30,59 @@
 body {
     font-family: Helvetica,Arial,sans-serif;
     font-size: 10pt;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 abbr {
     text-decoration: none;
     border: 0pt;
     font-style: normal;
+}
+
+p#example {
+    color: gray;
+    font: 12px Helvetica,sans-serif;
+}
+
+table {
+    margin: auto;
+    border: 1px solid #669999;
+}
+
+caption {
+    margin: auto;
+    padding: .2em;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+th {
+    font-weight: normal;
+    font-style: italic;
+    text-align: start;
+    border: 1px dotted #669999;
+    background: #99cccc;
+    color: #000000;
+}
+
+th,td {
+    width: 10em;
+    padding: .5em;
+}
+
+tr:nth-child(odd){ background: #ffffcc}
+tr:nth-child(even){ background: #ffffff}
+
+p:hover {
+    color: #cc6600;
+}
+
+tr:hover {
+    font-weight: bold;
+}
+
+.intro {
+    font-weight: bold;
+    font-size: 1.4em;
 }
