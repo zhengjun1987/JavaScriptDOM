@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Web Design</title>
+    <link rel="stylesheet" href="../style.css" type="text/css">
+</head>
+<body>
+<h1>Web Design</h1>
+<p>There are things you should know.</p>
+<ol id="linklist">
+    <li>
+        <a href="animation.html">Structure</a>
+    </li>
+    <li>
+        <a href="../ajax.html">Ajax</a>
+    </li>
+    <li>
+        <a href="../explanation.html">Explanation</a>
+    </li>
+</ol>
+<div id="slideshow">
+    <img src="../images/timg-2.gif" alt="building blocks of web design" id="preview">
+</div>
+</body>
+<script>
+    function extracted() {
+        var preview = document.getElementById("preview");
+        alert("preview.height = " + preview.height);//696
+        alert("preview.width = " + preview.width);//1280
+    }
+
+    function moveElement(elementId, finalX, finalY, interval) {
+        var message = document.getElementById(elementId);
+        var xpos = parseInt(message.style.left);
+        var ypos = parseInt(message.style.top);
+        if (xpos === finalX && ypos === finalY) return true;
+        if (xpos < finalX) {
+            xpos++;
+        }
+        if (xpos > finalX) {
+            xpos--;
+        }
+        if (ypos < finalY) {
+            ypos++;
+        }
+        if (ypos > finalY) {
+            ypos--;
+        }
+        message.style.left = xpos + "px";
+        message.style.top = ypos + "px";
+        var handler = "moveElement(\"" + elementId + "\", " + finalX + "," + finalY + "," + interval + ")";
+        setTimeout(handler, interval);
+    }
+
+    function prepareSlideShow() {
+        var preview = document.getElementById("preview");
+        preview.style.position = "absolute";
+        preview.style.left = "0px";
+        preview.style.top = "0px";
+
+        var linklist = document.getElementById("linklist");
+        var list = linklist.getElementsByTagName("a");
+        list[0].onmouseover = function () {
+            moveElement("preview",-200,0,10);
+        };
+        list[1].onmouseover = function () {
+            moveElement("preview",-400,0,10);
+        };
+        list[2].onmouseover = function () {
+            moveElement("preview",-600,0,10);
+        };
+    }
+
+    window.onload = function (ev) {
+        // setTimeout("extracted()", 2000);
+        prepareSlideShow();
+    }
+</script>
+</html>

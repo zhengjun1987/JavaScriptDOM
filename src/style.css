@@ -2,6 +2,13 @@
     font-family: "Arial Rounded MT Bold";
 }
 
+#slideshow {
+    width: 200px;
+    height: 696px;
+    position: relative;
+    overflow: hidden;
+}
+
 #purchases {
 
 }
